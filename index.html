@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/script.js"></script>
+        <title>Калькулятор</title>
+    </head>
+    <body>
+        <div class="mainWindow">
+            <div class="numberWindow">
+                <p class = "secondaryLine" id="secondaryLine"></p>
+                <h1 class="mainNumber" id="mainWindow"></h1>
+            </div>
+            <div class="keyPad">
+                <div class="equelKeyPad ">
+                    <button class="resetButton" onclick="calculator.pressReset()"><b>C</b></button>
+                    <button class="buttonEquel" onclick="calculator.pressEquel()"><b>=</b></button>
+                </div>
+                <div class="numberKeyPad">
+                    <button class="numberButton" onclick="calculator.pressNumberButton(7)"><b>7</b></button>
+                    <button class="numberButton" onclick="calculator.pressNumberButton(8)"><b>8</b></button>
+                    <button class="numberButton" onclick="calculator.pressNumberButton(9)"><b>9</b></button>
+                    <button class="numberButton" onclick="calculator.pressDivide()"><b>÷</b></button>
+                    <button class="numberButton" onclick="calculator.pressNumberButton(4)"><b>4</b></button>
+                    <button class="numberButton" onclick="calculator.pressNumberButton(5)"><b>5</b></button>
+                    <button class="numberButton" onclick="calculator.pressNumberButton(6)"><b>6</b></button>
+                    <button class="numberButton" onclick="calculator.pressMultiply()"><b>×</b></button>
+                    <button class="numberButton" onclick="calculator.pressNumberButton(1)"><b>1</b></button>
+                    <button class="numberButton" onclick="calculator.pressNumberButton(2)"><b>2</b></button>
+                    <button class="numberButton" onclick="calculator.pressNumberButton(3)"><b>3</b></button>
+                    <button class="numberButton" onclick="calculator.pressMinus()"><b>-</b></button>
+                    <button class="numberButton" onclick="calculator.pressRevers()"><b>+/-</b></button>
+                    <button class="numberButton" onclick="calculator.pressNumberButton(0)"><b>0</b></button>
+                    <button class="numberButton" onclick="calculator.pressDot()"><b>.</b></button>
+                    <button class="numberButton" onclick="calculator.pressPlus()"><b>+</b></button>
+                </div>
+
+            </div>
+            
+        </div>
+    </body>
+</html>
