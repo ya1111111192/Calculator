@@ -106,11 +106,24 @@ let calculator = {
         }
 
         if(this.action == "multiply") {
+            this.numAfterPoint = 0;
+           
+            if(String( this.firstNumber ).indexOf(".") > -1){
+               this.numAfterPoint = (String(this.firstNumber).length - (String( this.firstNumber ).indexOf(".") + 1));
+            }
             
-           this.numAfterPoint = (String(this.firstNumber).length - (String( this.firstNumber ).indexOf(".") + 1)) + (String(this.secondNumber).length - (String( this.secondNumber ).indexOf(".") + 1));
+            if(String( this.secondNumber ).indexOf(".") > -1){
+               this.numAfterPoint += String(this.secondNumber).length - (String( this.secondNumber ).indexOf(".") + 1);
+            }
+            
             
             this.currentNumberString = String(this.firstNumber * this.secondNumber);
-            this.currentNumberString = this.currentNumberString.slice( 0, this.currentNumberString.indexOf(".") + this.numAfterPoint + 1 );
+            
+            if(this.currentNumberString.indexOf(".") > -1){
+                this.currentNumberString = String((this.firstNumber * this.secondNumber) + 0.0000000000005);
+                this.currentNumberString = this.currentNumberString.slice( 0, this.currentNumberString.indexOf(".") + this.numAfterPoint + 1 );
+            }
+            
             
             this.action = "";
             
